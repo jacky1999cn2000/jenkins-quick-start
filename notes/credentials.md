@@ -9,7 +9,6 @@
   ![9.png](/screenshots/9.png)
 
   3. make "jenkins" a sudo user
-  
   ![10.gif](/screenshots/10.gif)
 
   4. login as "jenkins" user and create a ssh key (leave passphrase empty)
