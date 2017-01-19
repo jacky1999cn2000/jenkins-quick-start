@@ -9,6 +9,7 @@
   ![9.png](/screenshots/9.png)
 
   3. make "jenkins" a sudo user
+  
   ![10.gif](/screenshots/10.gif)
 
   4. login as "jenkins" user and create a ssh key (leave passphrase empty)
@@ -40,4 +41,4 @@
   ![19.png](/screenshots/19.png)
   ![20.png](/screenshots/20.png)
 
-  5. remember to change `etc/ssh/sshd_config` back and restart ssh service 
+  5. remember to change `etc/ssh/sshd_config` back and restart ssh service
