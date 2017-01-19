@@ -1,4 +1,4 @@
-# Installation and Configuration
+# Installation
 
 * Spin 2 ec2 servers with "jenkins-master" and "jenkins-slave" tags respectively
 * Use all default settings except "jenkins-master" has "HTTP" and "SSH" open for its security group, while "jenkins-slave" only has "SSH" open for its security group.
