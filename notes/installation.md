@@ -47,6 +47,6 @@
     * Launch the server and you should see this
     ![1.png](/screenshots/1.png)
     * Grab the password via `cat /var/log/jenkins/jenkins.log`
-    * Install recommended plugin, and create admin user
+    * Install recommended plugin, and create admin user (e.g. username: admin, password: 111111)
     * Done!
     ![2.png](/screenshots/2.png)
