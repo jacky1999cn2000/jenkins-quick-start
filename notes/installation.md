@@ -37,8 +37,8 @@
     # chkconfig nginx on
     ```
     * Launch the server and you should see this
-    [1.png](/screenshots/1.png)
+    ![1.png](/screenshots/1.png)
     * Grab the password via `cat /var/log/jenkins/jenkins.log`
     * Install recommended plugin, and create admin user
     * Done!
-    [2.png](/screenshots/2.png)
+    ![2.png](/screenshots/2.png)
