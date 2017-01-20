@@ -1,6 +1,6 @@
 # Build Slave
 
-* To make it more clear, in "Credentials" chapter, we added the default "jenkins" user on "jenkins-master" as Jenkins' credential default account - which means all the jobs we run, Jenkins will use this user to ssh into itself or other machines (we first used `ssh key-gen` to create ssh key for this user, then used `ssh-copy-id` to copy the .pub key to both itself and the remote "jenkins-slave" server).
+To make it more clear, in "Credentials" chapter, we added the default "jenkins" user on "jenkins-master" as Jenkins' credential default account - which means all the jobs we run, Jenkins will use this user to ssh into itself or other machines (we first used `ssh key-gen` to create ssh key for this user, then used `ssh-copy-id` to copy the .pub key to both itself and the remote "jenkins-slave" server).
 
 However, till now, the job was built (or run) on "jenkins-master" server (yes, inside the job, we ssh into "jenkins-slave" server and cat a file out, but the job itself was run on "jenkins-master").
 
@@ -27,3 +27,29 @@ The steps are identical to what we did on "jenkins-master":
   * make sure sshd_config was changed back and restart ssh service
 
   ![34.png](/screenshots/34.png)
+
+Now we have configured "jenkins-slave" server, and let's add it as a slave node:
+
+  * First, we need to make "jenkins-master" not care about running jobs. Go to `Jenkins -> Manage Jenkins -> Manage Nodes`, and click the config icon on master.
+
+  ![35.png](/screenshots/35.png)
+
+  * Change the "Usage" select to "Only build jobs ..."
+
+  ![36.png](/screenshots/36.png)
+
+  * Now back to "Manage Nodes" menu, and select "New Node", provide name and select type
+
+  ![37.png](/screenshots/37.png)
+
+  * Fill in all the information (I used private IP in the Host, so make sure "jenkins-master" can visit "jenkins-slave" via this IP)
+
+  ![38.png](/screenshots/38.png)
+
+  * Wait for the slave node to be synced
+
+  ![39.png](/screenshots/38.png)
+
+  * Run the job again, and see the logs to make sure the job was actually run on slave node
+
+  ![40.png](/screenshots/38.png)
