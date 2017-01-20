@@ -7,6 +7,7 @@
 * [ManagePlugins](/notes/manageplugins.md)
 * [FirstBuild](/notes/firstbuild.md)
 * [BuildSlave](/notes/buildslave.md)
+* [Github](/notes/github.md)
 
 https://aws.amazon.com/blogs/devops/set-up-a-build-pipeline-with-jenkins-and-amazon-ecs/
 
