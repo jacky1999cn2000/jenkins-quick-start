@@ -41,3 +41,23 @@
   ![20.png](/screenshots/20.png)
 
   5. remember to change `etc/ssh/sshd_config` back and restart ssh service
+
+* We not only want to use "jenkins" user on our local machine, we also want to "jenkins" user on remote machines (no matter the remote machine is a slave node - more on it later, or is just a remote machine which "jenkins-master" wants to ssh into). In order to achieve this goal, let's do the following:
+
+  1. switch to "jenkins-slave" ec2 (we haven't made this as a slave node yet, so just think it as a remote machine), with root user, create "jenkins" user
+
+  2. with root user, make "jenkins" user a sudo user (as we did above in "jenkins-master")
+
+  3. with root user, change `/etc/ssh/sshd_config` and restart sshd service (as we did before in "jenkins-master")
+
+  ![21.png](/screenshots/21.png)
+
+  4. now switch to "jenkins-master", login as "jenkins" user, and run `ssh-copy-id jenkins@[jenkins-slave-private-IP]` and `ssh-copy-id jenkins@[jenkins-slave-public-IP]`
+
+  ![22.png](/screenshots/22.png)
+
+  5. now "jenkins-master" should be able to ssh into "jenkins-slave" smoothly
+
+  ![23.png](/screenshots/23.png)
+
+  6. don't forget to change `/etc/ssh/sshd_config` back in "jenkins-slave" and restart sshd service 
