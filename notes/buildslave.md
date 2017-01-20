@@ -48,8 +48,8 @@ Now we have configured "jenkins-slave" server, and let's add it as a slave node:
 
   * Wait for the slave node to be synced
 
-  ![39.png](/screenshots/38.png)
+  ![39.png](/screenshots/39.png)
 
   * Run the job again, and see the logs to make sure the job was actually run on slave node
 
-  ![40.png](/screenshots/38.png)
+  ![40.png](/screenshots/40.png)
