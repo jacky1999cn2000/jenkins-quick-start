@@ -4,6 +4,7 @@
 * [Configuration](/notes/configuration.md)
 * [Security](/notes/security.md)
 * [Credentials](/notes/credentials.md)
+* [ManagePlugins](/notes/manageplugins.md)
 
 https://aws.amazon.com/blogs/devops/set-up-a-build-pipeline-with-jenkins-and-amazon-ecs/
 

@@ -1,0 +1,3 @@
+# ManagePlugins
+
+* go to `Jenkins -> Manage Jenkins -> Manage Plugins` to upgrade plugins, downgrade plugins and etc...
