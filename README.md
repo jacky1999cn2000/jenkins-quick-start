@@ -8,6 +8,7 @@
 * [FirstBuild](/notes/firstbuild.md)
 * [BuildSlave](/notes/buildslave.md)
 * [Github](/notes/github.md)
+* [SchedulingBuilds](/notes/schedulingbuilds.md)
 
 https://aws.amazon.com/blogs/devops/set-up-a-build-pipeline-with-jenkins-and-amazon-ecs/
 
