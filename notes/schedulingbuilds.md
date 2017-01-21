@@ -8,4 +8,4 @@
 
 * Verify the job was run every minute
 
-![50.png](/screenshots/50png)
+![50.png](/screenshots/50.png)
