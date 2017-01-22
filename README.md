@@ -10,6 +10,7 @@
 * [Github](/notes/github.md)
 * [SchedulingBuilds](/notes/schedulingbuilds.md)
 * [BuildLinking](/notes/buildlinking.md)
+* [ParameterizedBuilds](/notes/parameterizedbuilds.md)
 
 https://aws.amazon.com/blogs/devops/set-up-a-build-pipeline-with-jenkins-and-amazon-ecs/
 
