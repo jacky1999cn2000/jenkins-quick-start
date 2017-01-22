@@ -13,15 +13,13 @@
   service docker restart
 ```
 
-```
-Many programs, for instance Postgresql, run as a user which is specifically named after the program. This is done for a variety of reasons including security (finer-grained permissions can be configured for this user) and monitoring (it's easy to see that processes owned by foo user are using the most memory in commands like top). I'm not 100% sure, but there's a good chance the scripting and/or Jenkins itself drop down to this user role to perform their actions.
+*Many programs, for instance Postgresql, run as a user which is specifically named after the program. This is done for a variety of reasons including security (finer-grained permissions can be configured for this user) and monitoring (it's easy to see that processes owned by foo user are using the most memory in commands like top). I'm not 100% sure, but there's a good chance the scripting and/or Jenkins itself drop down to this user role to perform their actions.*
 
-In your case, if you are having the Jenkins user invoke docker commands, it would probably be easiest to add the Jenkins user to the docker group to allow it to invoke Docker commands without needing sudo:*
+*In your case, if you are having the Jenkins user invoke docker commands, it would probably be easiest to add the Jenkins user to the docker group to allow it to invoke Docker commands without needing sudo:*
 
-`sudo usermod -aG docker jenkins
+`sudo usermod -aG docker jenkins`
 
-Bewarned: All users of the docker group have, effectively, root-level permissions. Therefore, anyone who can run Jenkins jobs on this box could potentially escalate to root due to their access to the Docker CLI.
-```
+*Bewarned: All users of the docker group have, effectively, root-level permissions. Therefore, anyone who can run Jenkins jobs on this box could potentially escalate to root due to their access to the Docker CLI.*
 
 * Create Job
 ![52.png](/screenshots/52.png)
